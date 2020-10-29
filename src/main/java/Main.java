@@ -36,7 +36,7 @@ public class Main {
 
                 // Crea nuevo hilo al presionar el botón:
                 Hilo hilo = new Hilo();
-                hilo.run();
+                new Thread(hilo).start();
 
                 // Identificador de cada hilo:
                 System.out.println("Soy un nuevo hilo y este es mi ID: " + hilo.hashCode());
