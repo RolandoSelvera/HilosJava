@@ -34,12 +34,15 @@ public class Main {
             // Acción al presionar el botón:
             if (e.getSource() == boton) {
 
-                // Crea nuevo hilo al presionar el botón:
-                Hilo hilo = new Hilo();
-                new Thread(hilo).start();
+                // Crea nuevos hilos al presionar el botón:
+                Hilo hilo1 = new Hilo();
+                Hilo hilo2 = new Hilo();
+                new Thread(hilo1).start();
+                new Thread(hilo2).start();
 
                 // Identificador de cada hilo:
-                System.out.println("Soy un nuevo hilo y este es mi ID: " + hilo.hashCode());
+                System.out.println("Soy el hilo 1 y este es mi ID: " + hilo1.hashCode());
+                System.out.println("Soy el hilo 2 y este es mi ID: " + hilo2.hashCode());
             }
         }
     }
